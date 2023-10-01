@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Milan Real Estate Predictor</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="app.js"></script>
+	<link rel="stylesheet" href="app.css" >
+</head>
+<body>
+<div class="img"></div>
+<form class="form">
+	<h2>Area (Square Meters)</h2>
+	<input class="area" type="text" id="uiSqm" class="floatlabel" name="Squaremeter" value="60">
+	<h2>Rooms</h2>
+	<div>
+		<input type="radio" id="radio-room-1" name="uiRooms" value="1"/>
+		<label for="radio-room-1">1</label>
+		<input type="radio" id="radio-room-2" name="uiRooms" value="2" checked/>
+		<label for="radio-room-2">2</label>
+		<input type="radio" id="radio-room-3" name="uiRooms" value="3"/>
+		<label for="radio-room-3">3</label>
+		<input type="radio" id="radio-room-4" name="uiRooms" value="4"/>
+		<label for="radio-room-4">4</label>
+		<input type="radio" id="radio-room-5" name="uiRooms" value="5"/>
+		<label for="radio-room-5">5</label>
+		<input type="radio" id="radio-room-6" name="uiRooms" value="6"/>
+		<label for="radio-room-6">5+</label>
+	</div>
+</form>
+<form class="form">
+	<h2>Bathrooms</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
+		<label for="radio-bath-1">1</label>
+		<input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>
+		<label for="radio-bath-2">2</label>
+		<input type="radio" id="radio-bath-3" name="uiBathrooms" value="3"/>
+		<label for="radio-bath-3">3</label>
+		<input type="radio" id="radio-bath-4" name="uiBathrooms" value="5"/>
+		<label for="radio-bath-4">4+</label>
+	</div>
+	<h2>Neighborhood</h2>
+	<div>
+		<select class="location" name="" id="uiLocations">
+			<option value="" disabled="disabled" selected="selected">Choose a neighborhood</option>
+			<option>Affori</option>
+			<option>Cimiano</option>
+		</select>
+	</div>
+</form>
+<form class="form">
+	<h2>Year of Build</h2>
+	<input class="area" type="text" id="uiYob" class="floatlabel" name="Yob" value="2002">
+	<h2>Heating</h2>
+	<div>
+		<input type="radio" id="radio-autonomous" name="uiHeating" value="1" checked/>
+		<label for="radio-autonomous">Autonomous</label>
+		<input type="radio" id="radio-centralized" name="uiHeating" value="0"/>
+		<label for="radio-centralized">Centralized</label>
+	</div>
+	<h2>Elevator</h2>
+	<div>
+		<input type="radio" id="radio-elev-1" name="uiElevator" value="1" checked/>
+		<label for="radio-elev-1">Yes</label>
+		<input type="radio" id="radio-elev-0" name="uiElevator" value="0"/>
+		<label for="radio-elev-0">No</label>
+	</div>
+
+
+	<button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+	<div id="uiEstimatedPrice" class="result"> <h2></h2></div>
+</body>
+</html>
